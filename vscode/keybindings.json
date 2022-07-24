@@ -1,22 +1,23 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  // vim
   // mengubah tab menjadi next suggest
-  {
+/*   {
     "key": "tab",
     "command": "selectNextSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
+  }, */
   // menggunah shift tab menjadi prev suggest
-  {
+/*   {
     "key": "shift+tab",
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
+  }, */
+
+  // vim
   //   untuk mengaktifkan dan mematikan vim
   {
     "key": "ctrl+alt+v",
-    "command": "toggleVim",
+    "command": "toggleVim"
   },
   // memindahkan sesuatu yang di select menjadi kebawah
   {
@@ -26,11 +27,11 @@
   },
   // memindahkan sesuatu yang di select menjadi keatas
   {
-    "key": "shift+alt+k",
-    "command": "editor.action.moveLinesUpAction",
+  "key": "shift+alt+k",
+  "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  //   endvim     
+  //   endvim
   // multi cutsor if vim active
   {
     "key": "alt+d",
@@ -43,19 +44,6 @@
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus && !vim.active"
   },
-  // new file
-  {
-    "key": "shift+alt+n",
-    "command": "extension.advancedNewFile"
-  },
-  {
-    "key": "ctrl+alt+n",
-    "command": "-extension.advancedNewFile"
-  },
-  {
-    "key": "alt+n alt+k",
-    "command": "explorer.newFolder"
-  },
   {
     "key": "ctrl+n",
     "command": "workbench.action.files.newUntitledFile"
@@ -65,18 +53,9 @@
     "command": "workbench.action.terminal.kill"
   },
   {
-    "key": "ctrl+e ctrl+c",
-    "command": "EditorConfig.generate"
-  },
-  {
     "key": "ctrl+k ctrl+o",
     "command": "workbench.action.files.openFolder",
     "when": "openFolderWorkspaceSupport || vim.active"
-  },
-  {
-    "key": "ctrl+k ctrl+o",
-    "command": "-workbench.action.files.openFolder",
-    "when": "openFolderWorkspaceSupport"
   },
   // switch between terminal
   {
@@ -87,51 +66,77 @@
     "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious"
   },
-  // switch between editor and terminal is (ctrl+1 and ctrl+`) 
   //toggle max/min panel terminal
   {
-    "key": "alt+m",
+    "key": "ctrl+shift+'",
     "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
-    "key": "ctrl+m",
-    "command": "workbench.view.extension.cph-judge-view-container"
   },
   {
     "key": "ctrl+q",
     "command": "workbench.action.closeGroup",
     "when": "activeEditorGroupEmpty && multipleEditorGroups"
   },
-  // {
-  //   "key": "shift+alt+n",
-  //   "command": "explorer.newFolder"
-  // },
-  // {
-  //   "key": "alt+n",
-  //   "command": "explorer.newFile"
-  // },
   // close tab
   {
     "key": "ctrl+q",
     "command": "workbench.action.closeActiveEditor"
   },
-  // {
-  //   "command": "vscode-neovim.compositeEscape1",
-  //   "key": "j",
-  //   "when": "neovim.mode == insert && editorTextFocus",
-  //   "args": "j"
-  // },
-  // {
-  //   "command": "vscode-neovim.compositeEscape2",
-  //   "key": "k",
-  //   "when": "neovim.mode == insert && editorTextFocus",
-  //   "args": "k"
-  // },
-  // switch explorer and editor
-  // {
-  //   "key": "ctrl+e",
-  //   "command": "workbench.view.explorer"
-  // },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+  // EXPLORER
+  {
+    "key": "ctrl+l",
+    "when": "sideBarFocus",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+h",
+    "when": "workbench.view.explorerinputFocus",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
   {
     "key": "r",
     "command": "renameFile",
@@ -151,118 +156,30 @@
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },  {
+  },
+  {
     "key": "x",
     "command": "filesExplorer.cut",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "explorer.openAndPassFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
   {
     "key": "enter",
     "command": "-renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  // {
-  //   "key": "j",
-  //   "command": "list.focusDown",
-  //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  // },
-  // {
-  //   "key": "k",
-  //   "command": "list.focusUp",
-  //   "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  // },
   {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    "key": "g o",
+    "command": "filesExplorer.openFilePreserveFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
+  // END EXPLORER
   {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.quickOpenNavigateNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "tab",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "tab",
-    "command": "workbench.action.quickOpenNavigateNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "shit+tab",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "shift+tab",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "shift+tab",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "enter",
-    "command": "list.select",
-    "when": "explorerViewletVisible && filesExplorerFocus"
-  },
-  {
-    "key": "o",
-    "command": "list.select",
-    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "l",
-    "command": "list.toggleExpand",
-    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "h",
-    "command": "list.collapse",
-    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+a",
-    "command": "explorer.newFolder",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+;",
-    "command": "insertPrevSuggestion",
-    "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
-  },
-  {
-    "key": "ctrl+l",
-    "when": "sideBarFocus",
-    "command": "workbench.action.focusActiveEditorGroup"
-  },
-  {
-    "key": "ctrl+h",
-    "when": "workbench.view.explorerinputFocus",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "ctrl+k",
+    "key": "alt+k",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
@@ -270,6 +187,11 @@
     "key": "alt+j",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "shift+;",
+    "command": "insertPrevSuggestion",
+    "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
   },
   // {
   //   "key": "ctrl+j",
@@ -286,17 +208,28 @@
     "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
   },
   {
-    "key": "ctrl+alt+b",
-    "command": "workbench.view.extension.bookmarks"
+    "key": "ctrl+alt+`",
+    "command": "workbench.action.terminal.newWithProfile"
   },
-  // {
-  //   "key": "ctrl+f",
-  //   "command": "-vscode-neovim.ctrl-f",
-  //   "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
-  // },
-  // {
-  //   "key": "ctrl+h",
-  //   "command": "-editor.action.startFindReplaceAction",
-  //   "when": "editorFocus || editorIsOpen"
-  // }
+  // Extenion
+  // new file
+  {
+    "key": "shift+alt+n",
+    "command": "extension.advancedNewFile"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-extension.advancedNewFile"
+  },
+  {
+    "key": "ctrl+e ctrl+c",
+    "command": "EditorConfig.generate"
+  },
+  // disable namespace feature
+  {
+      "command": "-namespaceResolver.highlightNotImported",
+      "key": "ctrl+alt+n",
+      "when": "editorTextFocus"
+  },
+  // end Extension
 ]
