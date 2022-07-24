@@ -8,179 +8,78 @@
   // menggunakan clipboard untuk copy
   "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
-  //  "vim.statusBarColorControl": true,
-  //   "vim.statusBarColors.normal": ["#007ACC"],
-  //   "vim.statusBarColors.insert": "#3333",
-  //   "vim.statusBarColors.visual": "#B48EAD",
-  //   "vim.statusBarColors.visualline": "#B48EAD",
-  //   "vim.statusBarColors.visualblock": "#A3BE8C",
-  //   "vim.statusBarColors.replace": "#D08770",
-  //   "vim.statusBarColors.commandlineinprogress": "#007ACC",
-  //   "vim.statusBarColors.searchinprogressmode": "#007ACC",
-  //   "vim.statusBarColors.easymotionmode": "#007ACC",
-  //   "vim.statusBarColors.easymotioninputmode": "#007ACC",
-  //   "vim.statusBarColors.surroundinputmode": "#007ACC",
-  // // "vim.insertModeKeyBindings": [
-  // //   {
-  // //     "before": [
-  // //       "j",
-  // //       "j"
-  // //     ],
-  // //     "after": [
-  // //       "<Esc>"
-  // //     ],
-  // //   }
-  // // ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "<leader>"
-      ],
-      "commands": [
-        "whichkey.show"
-      ]
+      "before": ["<leader>"],
+      "commands": ["whichkey.show"]
     },
     {
-      "before": [
-        ">"
-      ],
-      "after": [
-        ">",
-        "g",
-        "v"
-      ]
+      "before": [">"],
+      "after": [">", "g", "v"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "after": [
-        "<",
-        "g",
-        "v"
-      ]
-    },
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>"
-      ],
-      "commands": [
-        "whichkey.show"
-      ]
+      "before": ["<leader>"],
+      "commands": ["whichkey.show"]
     },
     {
-      "before": [
-        "C-h"
-      ],
-      "commands": [
-        "workbench.view.explorer"
-      ]
-    },
-    // EASYMoTION REMAP
-    {
-      "before": [
-        "s",
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "s"
-      ]
+      "before": ["C-h"],
+      "commands": ["workbench.view.explorer"]
     },
     {
-      "before": [
-        "s",
-        "f"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "f"
-      ]
+      "before": ["S-y"],
+      "after": ["y", "$"]
+    },
+    // EASYMOTION REMAP
+    {
+      "before": ["s", "s"],
+      "after": ["<leader>", "<leader>", "s"]
     },
     {
-      "before": [
-        "s",
-        "F"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "F"
-      ]
+      "before": ["s", "f"],
+      "after": ["<leader>", "<leader>", "f"]
     },
     {
-      "before": [
-        "s",
-        "w"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "w"
-      ]
+      "before": ["s", "/"],
+      "after": ["<leader>", "<leader>", "/"]
     },
     {
-      "before": [
-        "s",
-        "b"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "b"
-      ]
+      "before": ["s", "F"],
+      "after": ["<leader>", "<leader>", "F"]
     },
     {
-      "before": [
-        "s",
-        "e"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "e"
-      ]
+      "before": ["s", "w"],
+      "after": ["<leader>", "<leader>", "w"]
     },
     {
-      "before": [
-        "s",
-        "j"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "j"
-      ]
+      "before": ["s", "b"],
+      "after": ["<leader>", "<leader>", "b"]
     },
     {
-      "before": [
-        "s",
-        "k"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "k"
-      ]
+      "before": ["s", "e"],
+      "after": ["<leader>", "<leader>", "e"]
+    },
+    {
+      "before": ["s", "j"],
+      "after": ["<leader>", "<leader>", "j"]
+    },
+    {
+      "before": ["s", "k"],
+      "after": ["<leader>", "<leader>", "k"]
     },
     // END EASYMOTION
     {
-      "before": [
-        "S-k"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
+      "before": ["S-k"],
+      "commands": ["editor.action.showHover"]
     },
     // fix bug undo redo
     {
-      "before": [
-        "u"
-      ],
+      "before": ["u"],
       "after": [],
       "commands": [
         {
@@ -190,9 +89,7 @@
       ]
     },
     {
-      "before": [
-        "<C-r>"
-      ],
+      "before": ["<C-r>"],
       "after": [],
       "commands": [
         {
@@ -200,38 +97,30 @@
           "args": []
         }
       ]
-    },
-    // Enable move cursor to each wrapped line (if wrap line enable)
-    {
-      "before": [
-        "j"
-      ],
-      "after": [
-        "g",
-        "j"
-      ]
-    },
-    {
-      "before": [
-        "k"
-      ],
-      "after": [
-        "g",
-        "k"
-      ]
     }
+    // // Enable move cursor to each wrapped line (if wrap line enable)
+    // {
+    //   "before": [
+    //     "j"
+    //   ],
+    //   "after": [
+    //     "g",
+    //     "j"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "k"
+    //   ],
+    //   "after": [
+    //     "g",
+    //     "k"
+    //   ]
+    // }
   ],
   "vim.handleKeys": {
-    // "<C-a>": false,
-    "<C-f>": false,
-    // "<C-d>": false,
     // Copy
     "<C-c>": false,
-    // Cut
-    // "<C-x>": false,
-    // Paste
-    // "<C-v>": false,
-    // "<C-w>": false,
     "<C-z>": false,
     "<C-y>": false
   },
@@ -434,7 +323,8 @@
           "key": "W",
           "name": "Add to watch",
           "type": "command",
-          "command": "editor.debug.action.selectionToWatch"
+          // "command": "workbench.debug.viewlet.action.addWatchExpression"   // add manual to watch
+          "command": "editor.debug.action.selectionToWatch" // select variabel first
         }
       ]
     },
@@ -450,12 +340,6 @@
       "type": "command",
       "command": "revealInExplorer"
     },
-    // {
-    //   "key": "n",
-    //   "name": "No Highlight",
-    //   "type": "command",
-    //   "command": "revealInExplorer"
-    // },
     {
       "key": "F",
       "name": "Find & Replace...",
@@ -749,11 +633,18 @@
           "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
         },
         {
-          "key": "r",
+          "key": "F",
           "name": "References",
           "type": "command",
           "command": "editor.action.goToReferences",
           "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+        },
+        {
+          "key": "r",
+          "name": "Rename only this file",
+          "type": "command",
+          "command": "editor.action.changeAll",
+          "when": "editorTextFocus && !editorReadonly"
         },
         {
           "key": "R",
@@ -853,7 +744,7 @@
       "key": "n",
       "name": "New File",
       "type": "command",
-      "command":"extension.advancedNewFile"
+      "command": "extension.advancedNewFile"
     },
     {
       "key": "o",
@@ -879,6 +770,12 @@
           "command": "workbench.action.files.openFile"
         }
       ]
+    },
+    {
+      "key": "n",
+      "name": "New File",
+      "type": "command",
+      "command": "extension.advancedNewFile"
     },
     {
       "key": "p",
@@ -1186,53 +1083,79 @@
     }
   ],
   // END WhichKey
+  "workbench.colorCustomizations": {
+    "editorLineNumber.foreground": "#888888",
+    "[Ayu Mirage]": {
+      "statusBar.foreground": "#eaeaea",
+      "foreground": "#82829d"
+    }
+  },
+  // "code-runner.executorMap": {
+  //   "c": "gcc $fullFileName -o $fileNameWithoutExt.exe && start $fileNameWithoutExt.exe"
+  // },
+  "code-runner.runInTerminal": true,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  // mengubah format css menjadi berspasi jika ada operator
+  "css.format.spaceAroundSelectorSeparator": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[blade]": {
+    "editor.autoClosingBrackets": "always"
+  },
+  "blade.format.enable": true,
+  // setting react emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Ayu Mirage",
+  "emmet.triggerExpansionOnTab": true,
   "workbench.editor.enablePreview": false,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "editor.wordWrap": "on",
-  "workbench.iconTheme": "vscode-icons",
   "editor.lineHeight": 20,
-  "editor.fontFamily": " 'JetBrainsMono NF','Hack NF','Fira Code',Consolas,'Courier New', monospace",
+  "editor.fontFamily": " 'JetBrainsMono NF',Consolas,'Courier New', monospace",
   "editor.fontLigatures": true, 
-  "code-runner.saveAllFilesBeforeRun": true,
-  // "code-runner.executorMap": {
-  //   "c": "gcc $fullFileName -o $fileNameWithoutExt.exe && start $fileNameWithoutExt.exe"
-  // },
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.runInTerminal": true,
-  "window.title": "${folderName} 💯",
-  "terminal.integrated.useWslProfiles": false,
+  // "terminal.integrated.useWslProfiles": false,
   "php.suggest.basic": false,
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSave": "afterDelay",
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
-  // mengubah format kurung kurawal disamping pada PHP
-  "intelephense.format.braces": "k&r",
-  // menggubah format brace C/C++ menjadi same line
-  "C_Cpp.clang_format_fallbackStyle": "LLVM",
-  // "editor.formatOnSave": true,
-  "workbench.colorCustomizations": {
-    "editorLineNumber.foreground": "#888888",
-    "[Night Owl (No Italics)]": {
-      "statusBar.foreground": "#d9d5d5"
-    },
-  },
   "diffEditor.ignoreTrimWhitespace": false,
   "terminal.integrated.fontSize": 13,
   "editor.lineNumbers": "relative",
   "window.zoomLevel": 0.6,
   "editor.fontSize": 13,
   "editor.renderWhitespace": "none",
+  "window.title": "~${folderName} 💯",
   "breadcrumbs.enabled": false,
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.minimap.enabled": false,
   "workbench.editor.showTabs": false,
+  "liveServer.settings.donotVerifyTags": true,
+  "gitlens.defaultDateLocale": null,
+  "gitlens.defaultDateFormat": null,
+  "gitlens.defaultDateShortFormat": null,
+
+  "terminal.integrated.profiles.windows": {
+    "Bash": {
+      "path": ["E:\\software\\Git\\bin\\bash.exe"],
+      "icon": "github"
+    }
+  },
   "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
 }
